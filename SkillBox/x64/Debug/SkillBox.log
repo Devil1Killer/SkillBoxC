@@ -1,3 +1,2 @@
-﻿  Helpers.cpp
-F:\UnrealEngineFile\M Visual Studip\SkillBox\SkillBox\Helpers.cpp(5,32): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  SkillBox.vcxproj -> F:\UnrealEngineFile\M Visual Studip\SkillBox\x64\Debug\SkillBox.exe
+﻿  SkillBox.cpp
+  SkillBox.vcxproj -> F:\UnrealEngineFile\M Visual Studip\SkillBoxC\x64\Debug\SkillBox.exe
