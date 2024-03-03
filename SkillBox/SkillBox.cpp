@@ -1,20 +1,27 @@
 ﻿#include <iostream>
-#include "Helpers.h"
+#include <string>
 
 int main()
 {
 
-    double a = 10, b = 10;;
+    std::string text;
 
-    std::cout << "Введите первое число: ";
-    std::cin >> a;
+    std::cout << "Введите слово: ";
+    std::cin >> text;
 
-    std::cout << "Введите второе число: ";
-    std::cin >> b;
+    std::cout << text.length() << std::endl;
+    std::cout << text.front() << std::endl;
+    std::cout << text.back() << std::endl;
 
-    SquareNumber(a, b);
+    std::cin.get();
 
-    std::cout << "Ответ: " << SquareNumber(a, b);
+    std::cout << "Введите слова: ";
+    getline(std::cin, text);
+    
+    std::cout << text.size() << std::endl;
+    std::cout << text[0] << std::endl;
+    std::cout << text[text.size() - 1] << std::endl;
+     
 
 }
 
