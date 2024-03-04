@@ -1,5 +1,7 @@
 ﻿#include <iostream>
 #include <string>
+#include <time.h>
+
 
 void ParityAlgorithm(int number, bool key) {
 
@@ -34,7 +36,7 @@ int main()
     std::cout << text[0] << std::endl;
     std::cout << text[text.size() - 1] << std::endl;
      
-    // 15.4 Практическая работа
+    // 15.4 Практическая работа ------------------------------------------
 
     int number;
 
@@ -44,16 +46,40 @@ int main()
     std::cout << (!(number % 2) ? "Чётные: " : "Нечётные: ");
     ParityAlgorithm(number, number % 2);
 
+    std::cout << std::endl;
 
+    // 16.5 Практическая работа ------------------------------------------
 
+    const int a = 5, b = 5;
 
+    struct tm buf;
+    time_t t = time(NULL);
+    localtime_s(&buf, &t);
 
-    //for (int i = 0; i < number; i++) {
+    int arrey[a][b];
 
-    //    std::cout << (!(i % 2) ? "Чётные: " : "Нечётные: ") << i << std::endl;
+    for (int i = 0; i < a; i++) {
 
-    //}
+        for (int j = 0; j < b; j++) {
 
+            arrey[i][j] = i + j;
+            std::cout << i + j << " ";
+
+        }
+
+        std::cout << std::endl;
+
+    }
+
+    int temp = 0;
+
+    for (int i = 0; i < b; i++) {
+
+        temp += arrey[buf.tm_mday % a][i];
+
+    }
+
+    std::cout << temp;
 
 }
 
