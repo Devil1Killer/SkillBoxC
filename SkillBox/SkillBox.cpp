@@ -2,6 +2,37 @@
 #include <string>
 #include <time.h>
 
+class Vector {
+
+private:
+
+    double x;
+    double y;
+    double z;
+
+public:
+
+    Vector(double x, double y, double z) {
+
+        this->x = x;
+        this->y = y;
+        this->z = z;
+
+    }
+
+    void showValues() {
+
+        std::cout << "Вектор: (" << x << ", " << y << ", " << z << ")" << std::endl;
+
+    }
+
+    double getLength() {
+
+        return std::sqrt(x * x + y * y + z * z);
+
+    }
+
+};
 
 void ParityAlgorithm(int number, bool key) {
 
@@ -17,6 +48,8 @@ void ParityAlgorithm(int number, bool key) {
 
 int main()
 {
+
+    std::cout << "14.4 Практическая работа." << std::endl;
 
     std::string text;
 
@@ -38,6 +71,8 @@ int main()
      
     // 15.4 Практическая работа ------------------------------------------
 
+    std::cout << "15.4 Практическая работа." << std::endl;
+
     int number;
 
     std::cout << "Введите число: ";
@@ -49,6 +84,8 @@ int main()
     std::cout << std::endl;
 
     // 16.5 Практическая работа ------------------------------------------
+
+    std::cout << "16.5 Практическая работа." << std::endl;
 
     const int a = 5, b = 5;
 
@@ -80,6 +117,17 @@ int main()
     }
 
     std::cout << temp;
+
+    std::cout << std::endl;
+
+    //17.5 Практическая работа ------------------------------------------
+
+    std::cout << "17.5 Практическая работа." << std::endl;
+
+    Vector v(3, 4, 5);
+
+    v.showValues();
+    std::cout << "Длина модуля вектора: " << v.getLength() << std::endl;
 
 }
 
