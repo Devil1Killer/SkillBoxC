@@ -49,28 +49,6 @@ void ParityAlgorithm(int number, bool key) {
 int main()
 {
 
-    std::cout << "14.4 Практическая работа." << std::endl;
-
-    std::string text;
-
-    std::cout << "Введите слово: ";
-    std::cin >> text;
-
-    std::cout << text.length() << std::endl;
-    std::cout << text.front() << std::endl;
-    std::cout << text.back() << std::endl;
-
-    std::cin.get();
-
-    std::cout << "Введите слова: ";
-    getline(std::cin, text);
-    
-    std::cout << text.size() << std::endl;
-    std::cout << text[0] << std::endl;
-    std::cout << text[text.size() - 1] << std::endl;
-     
-    // 15.4 Практическая работа ------------------------------------------
-
     std::cout << "15.4 Практическая работа." << std::endl;
 
     int number;
