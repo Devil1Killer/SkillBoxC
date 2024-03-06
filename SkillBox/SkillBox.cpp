@@ -67,9 +67,11 @@ int main() {
 
     }
 
+    std::cout << std::endl;
+
     std::cout << temp;
 
-    std::cout << std::endl;
+    std::cout << std::endl << std::endl;
 
     //17.5 Практическая работа ------------------------------------------
 
