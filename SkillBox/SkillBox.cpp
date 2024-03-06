@@ -34,34 +34,7 @@ public:
 
 };
 
-void ParityAlgorithm(int number, bool key) {
-
-    for (int i = key ? 1 : 0; i <= number; i += 2) {
-
-        std::cout << i << " ";
-
-    }
-
-    std::cout << std::endl;
-
-}
-
-int main()
-{
-
-    std::cout << "15.4 Практическая работа." << std::endl;
-
-    int number;
-
-    std::cout << "Введите число: ";
-    std::cin >> number;
-
-    std::cout << (!(number % 2) ? "Чётные: " : "Нечётные: ");
-    ParityAlgorithm(number, number % 2);
-
-    std::cout << std::endl;
-
-    // 16.5 Практическая работа ------------------------------------------
+int main() {
 
     std::cout << "16.5 Практическая работа." << std::endl;
 
@@ -90,7 +63,7 @@ int main()
 
     for (int i = 0; i < b; i++) {
 
-        temp += arrey[buf.tm_mday % a][i];
+        temp += arrey[(buf.tm_mday % a) - 1][i];
 
     }
 
