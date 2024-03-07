@@ -1,7 +1,57 @@
 ﻿#include <iostream>
 #include <string>
-#include <time.h>
 #include "algorithm"
+#include <vector>
+
+class Animal {
+
+public:
+
+    virtual void Voice() {
+
+        std::cout << "Animal sound" << std::endl;
+
+    }
+
+};
+
+class Cat : public Animal {
+
+public:
+
+    void Voice() override {
+
+        std::cout << "Mau!" << std::endl;
+
+    }
+
+};
+
+class Dog : public Animal {
+
+public:
+
+    void Voice() override {
+
+        std::cout << "Woof!" << std::endl;
+
+    }
+
+};
+
+class Ram : public Animal {
+
+public:
+
+    void Voice() override {
+
+        std::cout << "Be!" << std::endl;
+
+    }
+
+};
+
+//--------------------------------------------------
 
 class Player {
 
@@ -81,47 +131,7 @@ void DisplayLeaderboard(int CountPlayer, Player* ArrayPlayers) {
 
 }
 
-//--------------------
-
-class Vector {
-
-private:
-
-    double x;
-    double y;
-    double z;
-
-public:
-
-    Vector(double x, double y, double z) : x(x), y(y), z(z) {};
-
-    void showValues() {
-
-        std::cout << "Вектор: (" << x << ", " << y << ", " << z << ")" << std::endl;
-
-    }
-
-    double getLength() {
-
-        return std::sqrt(x * x + y * y + z * z);
-
-    }
-
-};
-
 int main() {
-
-    std::cout << "17.5 Практическая работа." << std::endl;
-
-    Vector v(3, 4, 5);
-
-    v.showValues();
-
-    std::cout << "Длина модуля вектора: " << v.getLength() << std::endl;
-
-    std::cout << std::endl << std::endl;
-
-    //18.5 Практическая работа ------------------------------------------
 
     std::cout << "18.5 Практическая работа." << std::endl;
 
@@ -138,6 +148,30 @@ int main() {
     DisplayLeaderboard(CountPlayer, ArrayPlayers);
 
     delete[] ArrayPlayers;
+
+    std::cout << std::endl << std::endl;
+
+    //19.5 Практическая работа ------------------------------------------
+
+    std::cout << "19.5 Практическая работа." << std::endl;
+
+    Animal* animals[3];
+
+    animals[0] = new Dog;
+    animals[1] = new Cat;
+    animals[2] = new Ram;
+
+    for (Animal* animal : animals) {
+
+        animal->Voice();
+
+    }
+
+    for (Animal* animal : animals) {
+
+        delete animal;
+
+    }
 
 }
 
