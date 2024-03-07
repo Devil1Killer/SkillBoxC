@@ -167,11 +167,7 @@ int main() {
 
     }
 
-    for (Animal* animal : animals) {
-
-        delete animal;
-
-    }
+    delete[] animals;
 
 }
 
